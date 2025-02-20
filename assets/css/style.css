@@ -1,0 +1,138 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+
+.grid-template {
+    display: grid;
+    grid-template-columns: 18rem auto;
+    grid-template-rows: 7rem calc(100vh - 10rem) 3rem;
+    grid-template-areas:
+      "navbar navbar navbar "
+      "menu main main "
+      "footer footer footer ";
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+    grid-area: navbar;
+    padding: 0 12rem;
+}
+  
+.header img {
+    margin: 0 1rem;
+    height: 7rem;
+    width: 7rem;
+}
+
+.menu{
+    color: var(--color-menu-text);
+    display: grid;
+    font-size: larger;
+    grid-area: menu;
+    justify-content: flex-start;
+    margin: 0;
+    background-color: blue;
+}
+  
+.categoria{
+    font-weight: 900;
+    font-size: larger;
+}
+  
+.menu details {
+    line-height: 3rem;
+}
+  
+.menu a {
+    display: block;
+    margin-left: 2rem;
+    line-height: 1.8rem;
+    text-decoration: none;
+    color: var(--color-menu-link);
+}
+  
+.menu a:hover {
+    color: white;
+    font-size: 1.2rem;
+}
+  
+.main {
+    display: grid;
+    grid-area: main;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    gap: 30px 20px;
+    padding: 3rem 3rem;
+    overflow-y: auto;
+    max-height: calc(100vh - 10rem);
+    background-color: crimson;
+}
+  
+.producto-container {
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+  
+.producto-container:hover {
+    transform: scale(1.01);
+    box-shadow: rgb(80, 4, 167) 1px 1px 5px;
+}
+
+.div-precio {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.2rem;
+}
+
+.precio {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.producto {
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    height: 25rem;
+    min-width: 25rem;
+    transition: 0.5s;
+}
+
+.producto img {
+    width: 22rem;
+}
+
+.descripcion-producto {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.p-descripcion {
+    margin: 1px;
+    line-height: 20px;
+}
+
+.add-button {
+    margin: 1rem 0;
+    width: 8rem;
+    height: 3rem;
+}
+ 
+.footer {
+    display: flex;
+    grid-area: footer;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
