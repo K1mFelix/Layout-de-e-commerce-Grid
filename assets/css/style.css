@@ -30,18 +30,15 @@ body {
     grid-area: menu;
     justify-content: flex-start;
     margin: 0;
+    line-height: 3rem;
 }
   
 .categoria{
     font-weight: 900;
     font-size: larger;
 }
-  
-.menu details {
-    line-height: 3rem;
-}
-  
-.menu a {
+
+.menu a{
     display: block;
     margin-left: 2rem;
     line-height: 1.8rem;
@@ -49,12 +46,12 @@ body {
     color: var(--color-menu-link);
 }
   
-.menu a:hover {
-    color: white;
+.menu a:hover{
+    color: #4a0092;
     font-size: 1.2rem;
 }
   
-.main {
+.main{
     display: grid;
     grid-area: main;
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
@@ -64,7 +61,7 @@ body {
     max-height: calc(100vh - 10rem);
 }
   
-.producto-container {
+.producto-container{
     align-items: center;
     border-radius: 10px;
     display: flex;
@@ -76,7 +73,7 @@ body {
   
 .producto-container:hover {
     transform: scale(1.01);
-    box-shadow: #4a0092 1px 1px 10px;
+    box-shadow: #4a0092 0px 0px 25px;
 }
 
 .div-precio {
@@ -91,14 +88,13 @@ body {
 }
 
 .producto {
-    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 1rem;
     height: 25rem;
     min-width: 25rem;
-    transition: 0.5s;
+    transition: 1.5s;
 }
 
 .producto img {
@@ -129,6 +125,6 @@ body {
     grid-area: footer;
     justify-content: center;
     align-items: center;
-    background-color: rgb(84, 18, 170);
+    background-color: #4a0092;
     color: white;
 }
